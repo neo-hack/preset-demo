@@ -7,4 +7,4 @@
 neo add @aiou/preset-demo --preset
 ```
 
-see [docs](https://github.com/neo-hack/neo/tree/master/packages/schema#readme) for more information about how to write a preset package
+see [Documentation](https://neo-docs.netlify.app/guide/preset-api.html#create-a-preset) for more information about how to write a preset package
