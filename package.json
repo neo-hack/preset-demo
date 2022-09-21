@@ -1,0 +1,49 @@
+{
+  "name": "@aiou/preset-demo",
+  "version": "0.1.0",
+  "description": "preset demo",
+  "keywords": [
+    "preset",
+    "template",
+    "neo"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/neo-hack/preset-demo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neo-hack/preset-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neo-hack/preset-demo/issues",
+    "email": "jiangweixian1994@gmail.com"
+  },
+  "author": {
+    "name": "JW",
+    "email": "jiangweixian1994@gmail.com",
+    "url": "https://twitter.com/jiangweixian"
+  },
+  "main": "index.json",
+  "files": [
+    "assets",
+    "index.json"
+  ],
+  "scripts": {
+    "build": "echo build",
+    "test": "echo test",
+    "ci:version": "pnpm changeset version",
+    "ci:publish": "pnpm run build && pnpm changeset publish",
+    "ci:snapshot": "pnpm changeset version --snapshot beta",
+    "ci:prerelease": "pnpm run build && pnpm changeset publish --tag beta",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/**/*.{js,ts,tsx,vue,json}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@changesets/cli": "latest",
+    "husky": "^8.0.0"
+  }
+}
